@@ -3,9 +3,6 @@ import express from 'express';
 import { renderToString } from 'react-dom/server';
 const app = express();
 //
-
-//
-//import Top from './Top';
 const topHtml = `
 <html>
 <head>
@@ -43,7 +40,6 @@ app.use('/api/*', async (req, res) => {
 //
 app.get('/*', (req, res) => {
   try {
-//    res.send(renderToString(Top()));
     if(process.env.NODE_ENV === "develop"){
       res.send(topHtml);
     }else{
