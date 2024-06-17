@@ -1,6 +1,4 @@
-//import { useState } from 'react'
-//import reactLogo from './assets/react.svg'
-import './App.css'
+//import './App.css'
 import { Link, Route, Routes } from 'react-router-dom'
 
 // Auto generates routes from files under ./pages
