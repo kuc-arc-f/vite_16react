@@ -1,3 +1,6 @@
+//import { useState } from 'react'
+//import reactLogo from './assets/react.svg'
+import './App.css'
 import { Link, Route, Routes } from 'react-router-dom'
 
 // Auto generates routes from files under ./pages
@@ -14,7 +17,7 @@ const routes = Object.keys(pages).map((path) => {
 })
 //console.log(routes);
 //
-export function App() {
+function App() {
   return (
     <>
       <nav>
@@ -39,5 +42,4 @@ export function App() {
     </>
   )
 }
-/*
-*/
+export default App

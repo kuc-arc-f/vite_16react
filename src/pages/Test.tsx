@@ -23,20 +23,35 @@ export default function Test() {
         const dt = new Date().toString();
         setUpdatetime(dt);
     }
-    const test = async function(){
-        const res = await fetch("/api/test");
-        const d = await res.json();
-        apiData = d.msg;
-        updateTimestap();
-console.log(d);
-    };
-    //
+  //
+  const test2 = async function(){
+    try{
+console.log("testProc" + new Date().toString());
+      const item = { param1: 1111 };
+      const body: any = JSON.stringify(item);		
+      const res = await fetch("/api/test/test1", {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},      
+        body: body
+      });
+      const json = await res.json();
+console.log(json);
+/*
+      if(json.ret && json.ret === 'OK') {
+        alert("OK, api POST")
+      }
+*/
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  //
     return (
     <>
         <h1>Test!</h1>
         <p>apiData=[ {apiData} ]</p>
         <hr />
-        <button onClick={()=>{test()}}>Test</button>
+        <button onClick={()=>{test2()}}>Test2</button>
         <hr />
         {items.map((item: any) => {
         return (

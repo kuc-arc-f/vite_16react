@@ -1,17 +1,17 @@
 ﻿# vite_16react
 
- Version: 0.9.1
+ Version: 0.9.2
 
  Author  : Kouji Nakashima / kuc-arc-f.com
 
  date    : 2024/03/23 
 
- update  : 2024/03/24   
+ update  : 2024/06/16   
 
 ***
 ### Summary
 
-file base routing, React + express + vite +  SPA sample
+file base routing, React SPA + express sample  
 
 ***
 ### build
@@ -29,7 +29,10 @@ yarn dev
 * prod-start
 
 ```
-yarn start
+yarn build
+
+#start
+yarn preview
 ```
 
 ***

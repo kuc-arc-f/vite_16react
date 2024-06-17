@@ -1,4 +1,3 @@
-
 {
   "compilerOptions": {
     "target": "ES2020",
@@ -8,7 +7,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -16,10 +15,14 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    "strict": true
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src/**/*"],
-  "exclude": [
-    "./src/test/*", "node_modules",
-  ]
+  "include": [
+    "src",
+    "server.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
