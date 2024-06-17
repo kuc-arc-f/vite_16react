@@ -1,6 +1,6 @@
 ﻿# vite_16react
 
- Version: 0.9.1
+ Version: 0.9.1 : first
 
  Author  : Kouji Nakashima / kuc-arc-f.com
 
