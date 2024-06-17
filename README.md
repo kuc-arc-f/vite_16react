@@ -36,9 +36,14 @@ yarn preview
 ```
 
 ***
+### Related
+
+https://github.com/bluwy/create-vite-extra
+
+***
 ### blog 
 
-* https://zenn.dev/knaka0209/books/b1bd883fb8dd95
+https://zenn.dev/knaka0209/books/b1bd883fb8dd95/viewer/d9c228
 
 ***
 

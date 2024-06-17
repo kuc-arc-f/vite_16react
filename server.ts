@@ -24,18 +24,6 @@ app.use(express.urlencoded({ extended: true }));
 //
 // API
 app.use('/api/test', testRouter);
-/*
-app.post('/api/test/test1', async function(req: any, res: any) {
-  try {
-    const body = req.body;
-console.log(body);
-    res.json({ret: "OK", data: body });
-  } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
-  }
-});
-*/
 // Add Vite or respective production middlewares
 let vite
 if (!isProduction) {
