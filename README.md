@@ -19,6 +19,13 @@ file base routing, React SPA + express sample
 https://stackblitz.com/~/github.com/kuc-arc-f/vite_16react
 
 ***
+### Sample
+
+* api_test: api sample
+
+* simple_auth: simple auth, user data from .env 
+
+***
 ### build
 
 * build, dev-start
@@ -39,6 +46,7 @@ yarn build
 #start
 yarn preview
 ```
+
 
 ***
 ### Related
