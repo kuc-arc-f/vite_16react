@@ -7,7 +7,7 @@ const router = express.Router();
 *
 * @return
 */
-router.post('/test1', async function(req: any, res: any) {
+router.post('/test1', async function(req, res) {
   try {
     const body = req.body;
 console.log("#start /test1");

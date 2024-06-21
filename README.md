@@ -6,7 +6,7 @@
 
  date    : 2024/03/23 
 
- update  : 2024/06/16 
+ update  : 2024/06/22 
 
 ***
 ### Summary
@@ -51,7 +51,7 @@ yarn preview
 ***
 ### Related
 
-https://github.com/bluwy/create-vite-extra
+https://github.com/vitejs/vite-plugin-react/tree/main/playground
 
 ***
 ### blog 
