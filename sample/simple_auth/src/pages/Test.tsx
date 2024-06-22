@@ -1,17 +1,17 @@
 import * as React from 'react';
 import {useState, useEffect}  from 'react';
-let apiData: string = "";
+let apiData = "";
 //
-const dataItems: any[] = [
+const dataItems = [
     {id:1, title: "title_1"},
     {id:2, title: "title_2"},
     {id:3, title: "title_3"},
   ];
-let items: any[] = [];
+let items = [];
 //
 export default function Test() {
     const [updatetime, setUpdatetime] = React.useState("");
-    const msg: string = "Test";
+    const msg = "Test";
     useEffect(() => {
         (async () => {
             items = dataItems;
@@ -28,7 +28,7 @@ export default function Test() {
     try{
 console.log("testProc" + new Date().toString());
       const item = { param1: 1111 };
-      const body: any = JSON.stringify(item);		
+      const body = JSON.stringify(item);		
       const res = await fetch("/api/test/test1", {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},      
@@ -48,12 +48,12 @@ console.log(json);
   //
     return (
     <>
-        <h1>Test!</h1>
+        <h1>Test!!</h1>
         <p>apiData=[ {apiData} ]</p>
         <hr />
         <button onClick={()=>{test2()}}>Test2</button>
         <hr />
-        {items.map((item: any) => {
+        {items.map((item) => {
         return (
         <div key={item.id}>
           <h3 className="text-3xl font-bold">{item.title}</h3>
