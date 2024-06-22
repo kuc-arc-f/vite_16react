@@ -44,7 +44,7 @@ yarn dev
 yarn build
 
 #start
-yarn preview
+yarn serve
 ```
 
 

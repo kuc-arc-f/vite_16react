@@ -3,18 +3,23 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node server",
-    "build": "npm run build:client && npm run build:server",
+    "dev": "nodemon",
+    "dev:test": "node server.js",
+    "build": "npm run clean && npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
-    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server && node build.js",
+    "clean": "rimraf dist && rimraf server.js",
     "generate": "vite build --outDir dist/static && npm run build:server && node prerender",
     "serve": "NODE_ENV=production node server",
     "debug": "node --inspect-brk server"
   },
   "dependencies": {
+    "nodemon": "^3.1.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.5.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
