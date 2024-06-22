@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import express from 'express'
-import testRouter from './server/api/test.js';
+import testRouter from './server/api/test';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
