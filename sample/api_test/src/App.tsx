@@ -1,4 +1,3 @@
-//import './App.css'
 import { Link, Route, Routes } from 'react-router-dom'
 
 // Auto generates routes from files under ./pages
@@ -13,9 +12,8 @@ const routes = Object.keys(pages).map((path) => {
     component: pages[path].default,
   }
 })
-//console.log(routes);
-//
-function App() {
+
+export function App() {
   return (
     <>
       <nav>
@@ -31,13 +29,9 @@ function App() {
       </nav>
       <Routes>
         {routes.map(({ path, component: RouteComp }) => {
-          return (
-          <Route key={path} path={path} element={<RouteComp />} 
-          ></Route>
-          )
+          return <Route key={path} path={path} element={<RouteComp />}></Route>
         })}
       </Routes>
     </>
   )
 }
-export default App
