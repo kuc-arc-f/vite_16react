@@ -16,6 +16,7 @@ turso LibSQL,  sample
 ***
 ### Setting
 
+* .env
 * turso URL, auth token
 
 ```
