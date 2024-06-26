@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import express from 'express'
-import testRouter from './server/api/test';
+import testRouter from './api/test';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -10,7 +10,7 @@ const isTest = process.env.VITEST
 
 process.env.MY_CUSTOM_SECRET = 'API_KEY_qwertyuiop'
 //
-console.log(".NODE_ENV =", process.env.NODE_ENV);
+console.log("env.NODE_ENV =", process.env.NODE_ENV);
 const app = express()
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -25,8 +25,8 @@ export async function createServer(
   const resolve = (p) => path.resolve(__dirname, p)
 
   const indexProd = isProd
-    ? fs.readFileSync(resolve('dist/client/index.html'), 'utf-8')
-    : ''
+    ? fs.readFileSync(resolve('./client/index.html'), 'utf-8')
+    : ''; 
 
   /**
    * @type {import('vite').ViteDevServer}
@@ -57,7 +57,7 @@ export async function createServer(
   } else {
     app.use((await import('compression')).default())
     app.use(
-      (await import('serve-static')).default(resolve('dist/client'), {
+      (await import('serve-static')).default(resolve('client'), {
         index: false,
       }),
     )
@@ -70,13 +70,13 @@ export async function createServer(
       let template, render
       if (!isProd) {
         // always read fresh template in dev
-        template = fs.readFileSync(resolve('index.html'), 'utf-8')
+        template = fs.readFileSync(resolve('../index.html'), 'utf-8')
         template = await vite.transformIndexHtml(url, template)
         render = (await vite.ssrLoadModule('/src/entry-server.tsx')).render
       } else {
         template = indexProd
         // @ts-ignore
-        render = (await import('./dist/server/entry-server.js')).render
+        render = (await import('./server/entry-server.js')).render
       }
 
       const appHtml = render(url)
