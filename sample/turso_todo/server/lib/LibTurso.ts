@@ -10,8 +10,7 @@ const  LibTurso = {
   */ 
   getClient: function(){
     try{
-//console.log("=", process.env.TORSO_URL);
-//TORSO_AUTH_TOKEN
+console.log("=", process.env.TORSO_URL);
       const client = createClient({
         url: process.env.TURSO_URL,
         authToken: process.env.TURSO_AUTH_TOKEN,

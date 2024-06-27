@@ -10,7 +10,7 @@
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server && node build.js",
     "clean": "rimraf dist && rimraf server.js",
     "generate": "vite build --outDir dist/static && npm run build:server && node prerender",
-    "serve": "NODE_ENV=production node server",
+    "serve": "NODE_ENV=production node dist/server",
     "debug": "node --inspect-brk server"
   },
   "dependencies": {

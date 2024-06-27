@@ -5,13 +5,13 @@ import fs from "fs";
 
 // サーバー側のビルド
 const serverOptions = {
-  entryPoints: [path.resolve("./server.ts")],
+  entryPoints: [path.resolve("./server/server.ts")],
   minify: true,
   bundle: true,
   target: "ES2022",
   platform: "node",
   format: 'esm', // ESMプロジェクトに設定
-  outdir: path.resolve("./"),
+  outdir: path.resolve("./dist"),
   tsconfig: path.resolve("./tsconfig.json"),
   external: fs.readdirSync("./node_modules")
 }
