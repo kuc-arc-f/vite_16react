@@ -27,6 +27,7 @@ export function App() {
           })}
           <li><a href="/htmx2">Htmx2</a></li>
           <li><a href="/htmx3">Htmx3</a></li>
+          <li><a href="/htmxtodo">HtmxTodo</a></li>
         </ul>
       </nav>
       <Routes>
