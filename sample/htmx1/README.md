@@ -25,6 +25,17 @@ yarn build
 #
 yarn dev
 ```
+***
+### Setting
+
+* .env
+* turso URL, auth token
+
+```
+TURSO_AUTH_TOKEN=""
+TURSO_URL="libsql://"
+```
+
 
 ***
 ### blog 
